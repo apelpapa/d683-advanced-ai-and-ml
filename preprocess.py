@@ -46,6 +46,7 @@ def clean_dataset(dataset):
 
 PROJECT_DIR = Path(__file__).resolve().parent
 RAW_DATA_DIR = PROJECT_DIR / "data" / "raw"
+PROCESSED_DATA_DIR = PROJECT_DIR / "data" / "processed"
 train = pd.read_csv(RAW_DATA_DIR / "train.csv", keep_default_na=False)
 test = pd.read_csv(RAW_DATA_DIR / "test.csv", keep_default_na=False)
 
@@ -66,3 +67,19 @@ for name, dataSet in [("Training", train), ("Testing", test)]:
     print(f"Columns: {dataSet.columns.tolist()}")
     print("Technical label counts:")
     print(dataSet["label_technical"].value_counts().sort_index())
+
+PROCESSED_DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+train.to_csv(
+    PROCESSED_DATA_DIR / "train.csv",
+    index=False,
+    encoding="utf-8",
+)
+
+test.to_csv(
+    PROCESSED_DATA_DIR / "test.csv",
+    index=False,
+    encoding="utf-8",
+)
+
+print(f"\nPreprocessed datasets saved to: {PROCESSED_DATA_DIR}")
