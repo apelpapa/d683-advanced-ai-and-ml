@@ -1,0 +1,19 @@
+Baseline validation evaluation
+Source: data/processed/train.csv
+Split: 80/20, stratified, random_state=42
+Training reviews: 719
+Validation reviews: 180
+
+                    precision    recall  f1-score   support
+
+    Other feedback     0.8281    0.8281    0.8281       128
+Technical feedback     0.5769    0.5769    0.5769        52
+
+          accuracy                         0.7556       180
+         macro avg     0.7025    0.7025    0.7025       180
+      weighted avg     0.7556    0.7556    0.7556       180
+
+Confusion matrix: rows=actual, columns=predicted
+Class order: 0=Other feedback, 1=Technical feedback
+[[106  22]
+ [ 22  30]]
