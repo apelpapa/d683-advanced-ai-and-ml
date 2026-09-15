@@ -1,0 +1,47 @@
+{
+  "selection_metric": "technical_feedback_f1",
+  "training_reviews": 899,
+  "folds": 5,
+  "shuffle": true,
+  "random_state": 42,
+  "candidate_count": 32,
+  "parameter_grid": {
+    "tfidf__ngram_range": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "tfidf__min_df": [
+      1,
+      2
+    ],
+    "classifier__C": [
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "classifier__class_weight": [
+      null,
+      "balanced"
+    ]
+  },
+  "baseline_cv_f1": 0.5906154659030867,
+  "best_cv_f1": 0.624053438216842,
+  "best_cv_f1_std": 0.05612388619351814,
+  "cv_f1_improvement": 0.03343797231375534,
+  "best_parameters": {
+    "classifier__C": 10.0,
+    "classifier__class_weight": "balanced",
+    "tfidf__min_df": 1,
+    "tfidf__ngram_range": [
+      1,
+      1
+    ]
+  }
+}
