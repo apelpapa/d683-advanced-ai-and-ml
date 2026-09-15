@@ -1,0 +1,23 @@
+Final held-out test evaluation
+Model: models/tuned_model.joblib
+Source: data/processed/test.csv
+The saved pipeline was used without refitting.
+Test reviews: 200
+
+                    precision    recall  f1-score   support
+
+    Other feedback     0.8716    0.9021    0.8866       143
+Technical feedback     0.7308    0.6667    0.6972        57
+
+          accuracy                         0.8350       200
+         macro avg     0.8012    0.7844    0.7919       200
+      weighted avg     0.8315    0.8350    0.8326       200
+
+Confusion matrix: rows=actual, columns=predicted
+Class order: 0=Other feedback, 1=Technical feedback
+[[129  14]
+ [ 19  38]]
+
+Technical-feedback F1: 0.6972
+F1 target: 0.75
+Target status: Not met
