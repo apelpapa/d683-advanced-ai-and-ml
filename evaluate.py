@@ -3,9 +3,7 @@ from pathlib import Path
 import pandas as pd
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import train_test_split
-
 from model import build_model
-
 
 PROJECT_DIR = Path(__file__).resolve().parent
 TRAIN_DATA_PATH = PROJECT_DIR / "data" / "processed" / "train.csv"

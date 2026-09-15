@@ -5,7 +5,6 @@ import pandas as pd
 
 from model import build_model
 
-
 PROJECT_DIR = Path(__file__).resolve().parent
 TRAIN_DATA_PATH = PROJECT_DIR / "data" / "processed" / "train.csv"
 MODEL_PATH = PROJECT_DIR / "models" / "baseline_model.joblib"
